@@ -5,7 +5,7 @@ using EXILANT.Labs.CoAP.Channels;
 using EXILANT.Labs.CoAP.Message;
 using System;
 
-public class Test : MonoBehaviour {
+public class CoAPClient : MonoBehaviour {
 
 	private static CoAPClientChannel _coapClient = null;
 
@@ -14,7 +14,6 @@ public class Test : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		
-		StartCoAPClient();
 	}
 	
 	// Update is called once per frame
@@ -22,7 +21,7 @@ public class Test : MonoBehaviour {
 		
 	}
 
-	private void StartCoAPClient()
+	public void StartCoAPClient()
 	{
 		Debug.Log ("about to start server");
 
@@ -39,7 +38,7 @@ public class Test : MonoBehaviour {
 			Debug.Log (e.Message);
 		}
 
-		Debug.Log ("server started");
+		Debug.Log ("client started");
 
 		_coapClient.CoAPResponseReceived += CoAPResponseReceivedHandler;
 
