@@ -1,8 +1,8 @@
-﻿<Properties StartupConfiguration="Multi-Startup">
+﻿<Properties StartupConfiguration="{C6B92383-C872-41DA-A5CE-E8A25C77FD1F}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Test.cs">
     <Files>
-      <File FileName="Assets/Test.cs" Line="5" Column="6" />
+      <File FileName="Assets/Test.cs" Line="42" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -11,10 +11,7 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations>
-    <MultiItemSolutionRunConfiguration Id="Multi-Startup" Name="Multi-Startup">
-      <Items>
-        <StartupItem ItemId="{67E45882-F186-3992-1BF7-25C026681B9C}" ItemName="Assembly-CSharp" />
-      </Items>
-    </MultiItemSolutionRunConfiguration>
+    <MultiItemSolutionRunConfiguration Id="Multi-Startup" Name="Multi-Startup" />
   </MultiItemStartupConfigurations>
+  <MonoDevelop.Ide.ItemProperties.CoAPClient PreferredExecutionTarget="Unity.Editor" />
 </Properties>

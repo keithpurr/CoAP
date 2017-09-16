@@ -26,16 +26,17 @@ public class Test : MonoBehaviour {
 	{
 		Debug.Log ("about to start server");
 
-		string host = "Qide-iPhone";
+		//string host = "Qide-iPhone";
+        string host = "Qis-iPhone";
 
 		int serverPort = 5683;
 
 		_coapClient = new CoAPClientChannel();
 
 		try {_coapClient.Initialize(host, serverPort);}
-		catch{
+        catch(Exception e){
 			
-			Debug.Log ("server failed");
+			Debug.Log (e.Message);
 		}
 
 		Debug.Log ("server started");
