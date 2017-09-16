@@ -1,8 +1,9 @@
 ﻿<Properties StartupConfiguration="{C6B92383-C872-41DA-A5CE-E8A25C77FD1F}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/CoAPClient.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CoAPClient.cs">
     <Files>
-      <File FileName="Assets/CoAPClient.cs" Line="10" Column="29" />
+      <File FileName="Assets/Scripts/CoAPServer.cs" Line="27" Column="1" />
+      <File FileName="Assets/Scripts/CoAPClient.cs" Line="13" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

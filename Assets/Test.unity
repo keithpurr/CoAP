@@ -282,6 +282,7 @@ GameObject:
   - component: {fileID: 571289638}
   - component: {fileID: 571289637}
   - component: {fileID: 571289636}
+  - component: {fileID: 571289641}
   - component: {fileID: 571289640}
   m_Layer: 0
   m_Name: Cube
@@ -355,6 +356,17 @@ Transform:
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &571289640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 571289635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e57fa5c82a0c3416bbd2eaf9bd43671a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &571289641
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -440,7 +452,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1089503717}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 571289640}
+        m_MethodName: StartCoAPServer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1089503717
@@ -774,7 +797,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 571289640}
+      - m_Target: {fileID: 571289641}
         m_MethodName: StartCoAPClient
         m_Mode: 1
         m_Arguments:
