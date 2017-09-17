@@ -6,11 +6,22 @@ using EXILANT.Labs.CoAP.Channels;
 using System.Net;
 using System;
 using EXILANT.Labs.CoAP.Helpers;
+using UnityEngine.UI;
 
 public class CoAPServer : MonoBehaviour
 {
+    public Vector2 scrollPosition = Vector2.zero;
+
+    private string message = "";
 
     private CoAPServerChannel _coapServer = null;
+
+	void OnGUI()
+	{
+        
+		message = GUI.TextArea(new Rect(300, 50, 400, 400), message, 500);
+	}
+
 
     public void StartCoAPServer()
     {
@@ -43,9 +54,11 @@ public class CoAPServer : MonoBehaviour
         //{
         //	txtView.Text = coapReq.ToString();
         //});
-        // For UIKit to update the screen, your code needs to run the main loop. 
+         //For UIKit to update the screen, your code needs to run the main loop. 
 
         Debug.Log("Received Request::" + coapReq);
+
+        message = coapReq.ToString();
 
         Debug.Log($"uri path: {coapReq.GetPath()}");
 
@@ -134,6 +147,8 @@ public class CoAPServer : MonoBehaviour
                     resp.AddPayload(this.GetSupportedResourceDescriptions());
                     //Tell recipient about the content-type of the response
                     resp.AddOption(CoAPHeaderOption.CONTENT_FORMAT, AbstractByteUtils.GetBytes(CoAPContentFormatOption.APPLICATION_LINK_FORMAT));
+
+                    message += resp.ToString();
                     //send it
                     _coapServer.Send(resp);
                 }
