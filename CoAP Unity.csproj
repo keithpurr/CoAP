@@ -116,6 +116,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Controller.cs" />
     <Compile Include="Assets\Scripts\CoAPClient.cs" />
     <Compile Include="Assets\Scripts\CoAPServer.cs" />
   </ItemGroup>
