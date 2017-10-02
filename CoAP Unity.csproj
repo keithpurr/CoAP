@@ -119,6 +119,7 @@
     <Compile Include="Assets\Scripts\CoAPClient.cs" />
     <Compile Include="Assets\Scripts\CoAPServer.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />
+    <Compile Include="Assets\Scripts\Victory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
