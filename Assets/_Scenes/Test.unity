@@ -979,7 +979,7 @@ Transform:
   - {fileID: 576487661}
   - {fileID: 435634530}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &823122092
 Prefab:
@@ -1187,9 +1187,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4822310634593202, guid: 569f509dcd2bb46e2a7e6bf30c154b6b, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 143920005545883192, guid: 569f509dcd2bb46e2a7e6bf30c154b6b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114160924060512304, guid: 569f509dcd2bb46e2a7e6bf30c154b6b,
         type: 2}
       propertyPath: m_Enabled
       value: 0
@@ -1807,7 +1812,7 @@ RectTransform:
   - {fileID: 1089503715}
   - {fileID: 1420428648}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1850,7 +1855,7 @@ Transform:
   - {fileID: 2029966904}
   - {fileID: 571289639}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1387216821
 GameObject:
@@ -2304,7 +2309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00c3c865782347f41b6358d9fba14b48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementRange: 100
+  MovementRange: 30
   axesToUse: 0
   horizontalAxisName: Horizontal
   verticalAxisName: Vertical
