@@ -3,62 +3,63 @@ using System.Collections;
 
 public class Controller : MonoBehaviour
 {
-	public float speed = 0.1F;
-	public Vector2 startPos;
-	public Vector2 direction;
-	public bool directionChosen;
+    public float speed = 2.0f;
+	private float startTime;
+	private Vector3 startPosition;
+	private Vector3 targetPosition;
+    private float journeyLength = 1.0f;
 
-		void Update()
-		{
-			if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
-			{
-				// Get movement of the finger since last frame
-	            Vector2 touchDeltaPosition = Input.GetTouch(0).deltaPosition.normalized;
 
-				// Move object across XY plane
-	            transform.Translate( -touchDeltaPosition.y * speed, 0,-touchDeltaPosition.x * speed, Space.Self);
 
-	            Debug.Log(touchDeltaPosition); 
 
-	            // obj should be moved according to its own coordination: x & z
-			}
+    void Start(){
+        
+        startPosition = transform.position;
+        targetPosition = startPosition;
+        startTime = Time.time;
+    }
+
+
+	void Update(){
+
+			float distCovered = (Time.time - startTime) * speed;
+			float fracJourney = distCovered / journeyLength;
+            transform.position = Vector3.Lerp(startPosition, targetPosition, fracJourney);
+
 		}
+
+    public void MoveUpWard(){
+
+		startTime = Time.time;
+        startPosition = transform.position;
+        targetPosition = startPosition + Vector3.forward;
+
+        }
+
+	public void MoveDownWard()
+	{
+
+		startTime = Time.time;
+		startPosition = transform.position;
+        targetPosition = startPosition + Vector3.back;
+
 	}
 
-//	void Update()
-//	{
-//		// Track a single touch as a direction control.
-//		if (Input.touchCount > 0)
-//		{
-//			Touch touch = Input.GetTouch(0);
+    public void MoveLeftWard()
+	{
 
-//			// Handle finger movements based on touch phase.
-//			switch (touch.phase)
-//			{
-//				// Record initial touch position.
-//				case TouchPhase.Began:
-//					startPos = touch.position;
-//					directionChosen = false;
-//					break;
+		startTime = Time.time;
+		startPosition = transform.position;
+        targetPosition = startPosition + Vector3.left;
 
-//				// Determine direction by comparing the current touch position with the initial one.
-//				//case TouchPhase.Moved:
-//					//direction = touch.position - startPos;
-//					//break;
+	}
+	public void MoveRightWard()
+	{
 
-//				// Report that a direction has been chosen when the finger is lifted.
-//				case TouchPhase.Ended:
-//                    directionChosen = true;
-//                    direction = touch.position - startPos;
-//                    Debug.Log(direction.normalized);
-//					break;
-//			}
+		startTime = Time.time;
+		startPosition = transform.position;
+        targetPosition = startPosition + Vector3.right;
 
+	}
 
-//		}
-//		//if (directionChosen)
-//		//{
-			
-//		//}
-//	}
-//}
+}
