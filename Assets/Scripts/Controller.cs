@@ -54,7 +54,7 @@ public class Controller : MonoBehaviour
 		}
 
     // when collide into (invisible) walls, lock movement in one direction from crashing into the wall
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.tag == "Wallx"){
             Debug.Log("hitwallx");
