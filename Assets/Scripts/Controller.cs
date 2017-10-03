@@ -42,9 +42,13 @@ public class Controller : MonoBehaviour
     private void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.tag == "Wallx"){
-            Debug.Log("hitwall");
+            Debug.Log("hitwallx");
             // for a wall on the left, keep x the same will prevent Player run into the wall
             targetPosition.x = transform.position.x;
+        }
+        if (collision.gameObject.tag == "Wallz"){
+            Debug.Log("hitwallz");
+            targetPosition.z = transform.position.z;
         }
     }
 
