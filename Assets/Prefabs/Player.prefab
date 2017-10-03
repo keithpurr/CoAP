@@ -121,5 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6af9317b3b85e4686a2ca0e9809b5dd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  powerMagnitude: 52
+  speed: 2.5
+  upButton: {fileID: 0}
+  downButton: {fileID: 0}
+  leftButton: {fileID: 0}
+  rightButton: {fileID: 0}
