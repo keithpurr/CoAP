@@ -122,6 +122,7 @@
     <Compile Include="Assets\Scripts\Controller.cs" />
     <Compile Include="Assets\Scripts\Victory_Box.cs" />
     <Compile Include="Assets\Scripts\Victory_Player.cs" />
+    <Compile Include="Assets\StopMovement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
