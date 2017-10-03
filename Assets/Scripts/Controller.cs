@@ -18,7 +18,8 @@ public class Controller : MonoBehaviour
 
     private bool ifCollide = false;
     private Vector3 positionDiff;
-    [SerializeField]
+    //[SerializeField]
+    //private Transform[] boxInContact =  new Transform[2];
     private Transform boxInContact;
 
 
@@ -71,7 +72,8 @@ public class Controller : MonoBehaviour
             ifCollide = true;
             positionDiff = collision.transform.position - transform.position;
             // what about multiple boxes in contact
-            boxInContact = collision.gameObject.transform;
+            boxInContact = collision.transform;
+            //boxInContact.SetValue(collision.gameObject.transform,0);
             //collision.gameObject.transform.parent = transform;
         }
 
@@ -80,6 +82,7 @@ public class Controller : MonoBehaviour
     {
         if(collision.gameObject.tag == "Box"){
             ifCollide = false;
+
         }
     }
 
