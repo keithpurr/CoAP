@@ -1,19 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Controller : MonoBehaviour
 {
     public float speed = 2.0f;
-    public float powerMagnitude = 10.0f;
+    public Button upButton;
+    public Button downButton;
+    public Button leftButton;
+    public Button rightButton;
+    private bool interactable = true;
 
 	private float startTime;
 	private Vector3 startPosition;
 	private Vector3 targetPosition;
     private float journeyLength = 1.0f;
 
-    //private Rigidbody _rigidbody;
-    //private Vector3 force;
-    //private bool buttonPushed = false;
 
     void Start(){
         
@@ -21,24 +23,30 @@ public class Controller : MonoBehaviour
         targetPosition = startPosition;
         startTime = Time.time;
 
-        //_rigidbody = GetComponent<Rigidbody>();
-
     }
 
 
 	void Update(){
 
+        // move to targetPosition set by buttons
         float distCovered = (Time.time - startTime) * speed;
         float fracJourney = distCovered / journeyLength;
         transform.position = Vector3.Lerp(startPosition, targetPosition, fracJourney);
-        //if (buttonPushed)
-        //{
-        //    _rigidbody.AddForce(force * powerMagnitude);
-        //    buttonPushed = false;
-        //}
+
+		// if last operation is not done yet (move 1 in given direction), button not interactive 
+		if (targetPosition != transform.position){
+            interactable = false;
+        }else{
+            interactable = true;
+        }
+		upButton.interactable = interactable;
+		downButton.interactable = interactable;
+		leftButton.interactable = interactable;
+		rightButton.interactable = interactable;
 
 		}
 
+    // when collide into (invisible) walls, lock movement in one direction from crashing into the wall
     private void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.tag == "Wallx"){
@@ -52,14 +60,12 @@ public class Controller : MonoBehaviour
         }
     }
 
+    // called when according button is pressed
     public void MoveUpWard(){
 
         startTime = Time.time;
         startPosition = transform.position;
         targetPosition = startPosition + Vector3.forward;
-
-        //force = Vector3.forward;
-        //buttonPushed = true;
         }
 
 	public void MoveDownWard()
