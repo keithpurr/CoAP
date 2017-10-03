@@ -118,6 +118,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CoAPClient.cs" />
     <Compile Include="Assets\Scripts\CoAPServer.cs" />
+    <Compile Include="Assets\Scripts\Controller backup.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />
     <Compile Include="Assets\Scripts\Victory.cs" />
   </ItemGroup>

@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class Controller : MonoBehaviour
+public class Controller1 : MonoBehaviour
 {
     public float speed = 2.0f;
     public Button upButton;
@@ -94,18 +94,12 @@ public class Controller : MonoBehaviour
         startPosition = transform.position;
         targetPosition = startPosition + Vector3.forward;
 
-        CarryBoxOrPutDown(Vector3.forward);
-
-        //if (ifCollide && positionDiff == Vector3.forward)
-        //{
-        //    Debug.Log("about to push the box forward");
-        //    boxInContact.SetParent(transform);
-        //    //what about leaving
-        //}
-        //if (ifCollide && positionDiff != Vector3.forward){
-        //    Debug.Log("Leaving");
-        //    transform.DetachChildren();
-        //}
+        if (ifCollide && positionDiff == Vector3.forward)
+        {
+            Debug.Log("about to push the box forward");
+            boxInContact.SetParent(transform);
+            //what about leaving
+        }
     }
 
 	public void MoveDownWard()
@@ -114,8 +108,6 @@ public class Controller : MonoBehaviour
 		startTime = Time.time;
 		startPosition = transform.position;
         targetPosition = startPosition + Vector3.back;
-
-		CarryBoxOrPutDown(Vector3.back);
 
 	}
 
@@ -126,8 +118,6 @@ public class Controller : MonoBehaviour
 		startPosition = transform.position;
         targetPosition = startPosition + Vector3.left;
 
-		CarryBoxOrPutDown(Vector3.left);
-
 	}
 	public void MoveRightWard()
 	{
@@ -136,23 +126,6 @@ public class Controller : MonoBehaviour
 		startPosition = transform.position;
         targetPosition = startPosition + Vector3.right;
 
-		CarryBoxOrPutDown(Vector3.right);
-
 	}
-
-    private void CarryBoxOrPutDown (Vector3 direction){
-        
-        if (ifCollide && positionDiff == direction)
-		{
-			Debug.Log("about to push the box forward");
-			boxInContact.SetParent(transform);
-			//what about leaving
-		}
-        if (ifCollide && positionDiff != direction)
-		{
-			Debug.Log("Leaving");
-			transform.DetachChildren();
-		}
-    }
 
 }
