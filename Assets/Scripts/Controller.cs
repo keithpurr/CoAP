@@ -54,7 +54,7 @@ public class Controller : MonoBehaviour
 		}
 
     // when collide into (invisible) walls, lock movement in one direction from crashing into the wall
-    private void OnCollisionStay(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Wallx"){
             Debug.Log("hitwallx");
@@ -148,7 +148,7 @@ public class Controller : MonoBehaviour
 			boxInContact.SetParent(transform);
 			//what about leaving
 		}
-        if (ifCollide && positionDiff != direction)
+        if (ifCollide && positionDiff != direction && boxInContact.parent == transform)
 		{
 			Debug.Log("Leaving");
 			transform.DetachChildren();

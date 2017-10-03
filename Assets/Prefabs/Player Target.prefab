@@ -24,8 +24,9 @@ GameObject:
   - component: {fileID: 23858445708715434}
   - component: {fileID: 114089007537056862}
   - component: {fileID: 95263172739522078}
+  - component: {fileID: 114070153301297114}
   m_Layer: 0
-  m_Name: Target
+  m_Name: Player Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57,7 +58,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 96e7c3c9532e643da9c67c732ee51d57, type: 2}
+  - {fileID: 2100000, guid: 8c19a618a0bd9844583b91dca0875a34, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -112,6 +113,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114070153301297114
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1244201339869326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16146b200edd74da288e5096d541fc6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target1: {fileID: 0}
+  target2: {fileID: 0}
 --- !u!114 &114089007537056862
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -123,3 +137,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1554a8390fe074575b5f3a79c35b9ff4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boxOnTarget: 0

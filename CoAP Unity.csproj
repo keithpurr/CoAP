@@ -120,7 +120,8 @@
     <Compile Include="Assets\Scripts\CoAPServer.cs" />
     <Compile Include="Assets\Scripts\Controller backup.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />
-    <Compile Include="Assets\Scripts\Victory.cs" />
+    <Compile Include="Assets\Scripts\Victory_Box.cs" />
+    <Compile Include="Assets\Scripts\Victory_Player.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
