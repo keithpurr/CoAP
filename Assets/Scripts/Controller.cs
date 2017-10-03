@@ -58,6 +58,10 @@ public class Controller : MonoBehaviour
             Debug.Log("hitwallz");
             targetPosition.z = transform.position.z;
         }
+        //if(collision.gameObject.tag == "Box"){
+        //    Debug.Log("hit box");
+        //    collision.gameObject.transform.parent = transform;
+        //}
     }
 
     // called when according button is pressed
