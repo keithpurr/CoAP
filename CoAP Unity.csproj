@@ -118,11 +118,12 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CoAPClient.cs" />
     <Compile Include="Assets\Scripts\CoAPServer.cs" />
+    <Compile Include="Assets\Scripts\CoAPServer_wellknow.cs" />
     <Compile Include="Assets\Scripts\Controller backup.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />
+    <Compile Include="Assets\Scripts\StopMovement.cs" />
     <Compile Include="Assets\Scripts\Victory_Box.cs" />
     <Compile Include="Assets\Scripts\Victory_Player.cs" />
-    <Compile Include="Assets\StopMovement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />

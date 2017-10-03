@@ -63,108 +63,75 @@ public class CoAPServer : MonoBehaviour
         Debug.Log($"uri path: {coapReq.GetPath()}");
 
         string reqURIPath = (coapReq.GetPath() != null) ? coapReq.GetPath().ToLower() : "";
-        /**
-			* Draft 18 of the specification, section 5.2.3 states, that if against a NON message,
-			* a response is required, then it must be sent as a NON message
-			*/
 
-        // /.well-know/ example
+		// the NON, GET temp example
 
 
-        /*
-   * For well-know path, we should support both CON and NON.
-   * For NON request, we send back the details in another NON message
-   * For CON request, we send back the details in an ACK
-   */
-        /*Well known should be a GET*/
-        if (coapReq.Code.Value != CoAPMessageCode.GET)
-        {
-            if (coapReq.MessageType.Value == CoAPMessageType.CON)
-            {
-                CoAPResponse resp = new CoAPResponse(CoAPMessageType.ACK,
-                                                    CoAPMessageCode.METHOD_NOT_ALLOWED,
-                                                    coapReq /*Copy all necessary values from request in the response*/);
-                //When you use the constructor that accepts a request, then automatically
-                //the message id , token and remote sender values are copied over to the response
-                _coapServer.Send(resp);
-            }
-            else
-            {
-                //For NON, we can only send back a RST
-                CoAPResponse resp = new CoAPResponse(CoAPMessageType.RST,
-                                                    CoAPMessageCode.METHOD_NOT_ALLOWED,
-                                                    coapReq /*Copy all necessary values from request in the response*/);
-                //When you use the constructor that accepts a request, then automatically
-                //the message id , token and remote sender values are copied over to the response
-                _coapServer.Send(resp);
-            }
-        }
-        else
-        {
-            //Message type is GET...check the path..this server only supports well-known path
-            if (reqURIPath != ".well-known/core")
-            {
-                if (coapReq.MessageType.Value == CoAPMessageType.CON)
-                {
-                    CoAPResponse resp = new CoAPResponse(CoAPMessageType.ACK,
-                                                        CoAPMessageCode.NOT_FOUND,
-                                                        coapReq /*Copy all necessary values from request in the response*/);
-                    _coapServer.Send(resp);
-                }
-                else
-                {
-                    //For NON, we can only send back a RST
-                    CoAPResponse resp = new CoAPResponse(CoAPMessageType.RST,
-                                                        CoAPMessageCode.NOT_FOUND,
-                                                        coapReq /*Copy all necessary values from request in the response*/);
-                    _coapServer.Send(resp);
-                }
-            }
-            else
-            {
-                //Request is GET and path is right
-                if (coapReq.MessageType.Value == CoAPMessageType.CON)
-                {
-                    CoAPResponse resp = new CoAPResponse(CoAPMessageType.ACK,
-                                                        CoAPMessageCode.CONTENT,
-                                                        coapReq /*Copy all necessary values from request in the response*/);
-                    //Add response payload
-                    resp.AddPayload(GetSupportedResourceDescriptions());
-                    //Tell recipient about the content-type of the response
-                    // The content-type contains the list of resources in “CoRE Link Format” is “application/link-format”
-                    resp.AddOption(CoAPHeaderOption.CONTENT_FORMAT, AbstractByteUtils.GetBytes(CoAPContentFormatOption.APPLICATION_LINK_FORMAT));
-                    _coapServer.Send(resp);
-                }
-                else
-                {
-                    //Its a NON, send a NON back...in CoAPSharp, NON is always considered as request
-                    CoAPResponse resp = new CoAPResponse(CoAPMessageType.NON,
-                                                        CoAPMessageCode.CONTENT,
-                                                        coapReq);
-                    //Copy over other needed values from the reqeust
-                    //resp.Token = coapReq.Token;
-
-                    resp.AddPayload(this.GetSupportedResourceDescriptions());
-                    //Tell recipient about the content-type of the response
-                    resp.AddOption(CoAPHeaderOption.CONTENT_FORMAT, AbstractByteUtils.GetBytes(CoAPContentFormatOption.APPLICATION_LINK_FORMAT));
-
-                    message += resp.ToString();
-                    //send it
-                    _coapServer.Send(resp);
-                }
-            }
-        }
 
 
-    }
-	private string GetSupportedResourceDescriptions()
-	{
-		string resDesc = "<sensors/temp>;ct=" + CoAPContentFormatOption.APPLICATION_JSON +
-							";title=Temperature Sensor"; //temperature sensor
-		resDesc += ","; //A comma is used to separate each entry
-		resDesc += "<sensors/pressure>;ct=" + CoAPContentFormatOption.APPLICATION_JSON +
-							";title=Pressure Sensor"; //pressure sensor
-		return resDesc;
+		  //This sample only works on NON requests of type GET
+		  //This sample simualtes a temperature sensor at the path "sensors/temp"
+		  if (coapReq.MessageType.Value != CoAPMessageType.NON)
+		  {
+		      //only NON  combination supported..we do not understand this send a RST back
+		      CoAPResponse msgTypeNotSupported = new CoAPResponse(CoAPMessageType.RST, /*Message type*/
+		                                                          CoAPMessageCode.NOT_IMPLEMENTED, /*Not implemented*/
+		                                                          coapReq.ID.Value /*copy message Id*/);
+		      msgTypeNotSupported.Token = coapReq.Token; //Always match the request/response token
+
+		      //send response to client
+		      _coapServer.Send(msgTypeNotSupported);
+		  }
+		  else if (coapReq.Code.Value != CoAPMessageCode.GET)
+		  {
+		      //only GET method supported..we do not understand this send a RST back
+		      CoAPResponse unsupportedCType = new CoAPResponse(CoAPMessageType.RST, /*Message type*/
+		                                          CoAPMessageCode.METHOD_NOT_ALLOWED, /*Method not allowed*/
+		                                          coapReq /*copy message Id*/);
+		      unsupportedCType.Token = coapReq.Token; //Always match the request/response token
+		      //send response to client
+		      _coapServer.Send(unsupportedCType);
+		  }
+		  else if (reqURIPath != "sensors/temp")
+		  {
+		      //classic 404 not found..we do not understand this send a RST back 
+		      CoAPResponse unsupportedPath = new CoAPResponse(CoAPMessageType.RST, /*Message type*/
+		                                          CoAPMessageCode.NOT_FOUND, /*Not found*/
+		                                          coapReq /*copy message Id*/);
+		      unsupportedPath.Token = coapReq.Token; //Always match the request/response token
+		      //send response to client
+		      _coapServer.Send(unsupportedPath);
+		  }
+		  else
+		  {
+
+		      //All is well...send the measured temperature back
+		      //Again, this is a NON message...we will send this message as a JSON
+		      //string
+		      Hashtable valuesForJSON = new Hashtable();
+		      valuesForJSON.Add("temp", this.GetRoomTemperature());
+		      string tempAsJSON = JSONResult.ToJSON(valuesForJSON);
+		              //Now prepare the object
+
+		              CoAPResponse measuredTemp = new CoAPResponse(CoAPMessageType.NON, CoAPMessageCode.CONTENT, coapReq)
+		              {
+		                  Token = coapReq.Token, //Always match the request/response token
+		                                         //Add the payload
+		                  Payload = new CoAPPayload(tempAsJSON)
+		              };
+		              //Indicate the content-type of the payload
+		              measuredTemp.AddOption(CoAPHeaderOption.CONTENT_FORMAT,
+		                          AbstractByteUtils.GetBytes(CoAPContentFormatOption.APPLICATION_JSON));
+
+		              // can pass whole request in when construct a new response, that way server know where to send 
+		              // the response instead of having to set remote sender (does not work) separately
+
+		      //send response to client
+		              Console.WriteLine($" temp returned : {measuredTemp}");
+
+		       _coapServer.Send(measuredTemp);
+
+		  }
+		}
+
 	}
-
-}
