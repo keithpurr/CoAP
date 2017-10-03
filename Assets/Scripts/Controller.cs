@@ -41,10 +41,10 @@ public class Controller : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
-        if (collision.gameObject.tag == "Wall"){
+        if (collision.gameObject.tag == "Wallx"){
             Debug.Log("hitwall");
             // for a wall on the left, keep x the same will prevent Player run into the wall
-            targetPosition.x = transform.position.x; 
+            targetPosition.x = transform.position.x;
         }
     }
 

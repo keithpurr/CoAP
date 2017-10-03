@@ -14,10 +14,11 @@ public class Victory : MonoBehaviour {
 		
 	}
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Box")
         {
+            other.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
             Debug.Log("You win");
         }
     }
