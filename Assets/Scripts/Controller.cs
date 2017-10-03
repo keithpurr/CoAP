@@ -16,6 +16,12 @@ public class Controller : MonoBehaviour
 	private Vector3 targetPosition;
     private float journeyLength = 1.0f;
 
+    private bool ifCollide = false;
+    private Vector3 positionDiff;
+    [SerializeField]
+    private Transform boxInContact;
+
+
 
     void Start(){
         
@@ -58,19 +64,40 @@ public class Controller : MonoBehaviour
             Debug.Log("hitwallz");
             targetPosition.z = transform.position.z;
         }
-        //if(collision.gameObject.tag == "Box"){
-        //    Debug.Log("hit box");
-        //    collision.gameObject.transform.parent = transform;
-        //}
+        // everytime stand next to a box, calculate there position difference for judging
+        // if player going to push the box
+        if(collision.gameObject.tag == "Box"){
+            Debug.Log("hit box");
+            ifCollide = true;
+            positionDiff = collision.transform.position - transform.position;
+            // what about multiple boxes in contact
+            boxInContact = collision.gameObject.transform;
+            //collision.gameObject.transform.parent = transform;
+        }
+
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        if(collision.gameObject.tag == "Box"){
+            ifCollide = false;
+        }
     }
 
     // called when according button is pressed
-    public void MoveUpWard(){
+    public void MoveUpWard()
+    {
 
         startTime = Time.time;
         startPosition = transform.position;
         targetPosition = startPosition + Vector3.forward;
+
+        if (ifCollide && positionDiff == Vector3.forward)
+        {
+            Debug.Log("about to push the box forward");
+            boxInContact.SetParent(transform);
+            //what about leaving
         }
+    }
 
 	public void MoveDownWard()
 	{
