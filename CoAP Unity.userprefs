@@ -1,9 +1,10 @@
 ﻿<Properties StartupConfiguration="{5DB76A8F-3A75-C473-5291-6445C7946996}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="../CoAPSharp_Test/CoAP_Client_iOS/ViewController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Controller.cs">
     <Files>
       <File FileName="../CoAPSharp_Test/CoAP_Client_iOS/ViewController.cs" Line="80" Column="13" />
       <File FileName="Assets/Scripts/CoAPServer.cs" Line="59" Column="29" />
       <File FileName="../CoAPSharp_Test/CoAP_Server/ViewController.cs" Line="215" Column="64" />
+      <File FileName="Assets/Scripts/Controller.cs" Line="59" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

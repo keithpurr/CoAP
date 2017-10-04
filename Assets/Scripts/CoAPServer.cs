@@ -12,9 +12,18 @@ public class CoAPServer : MonoBehaviour
 {
     public Vector2 scrollPosition = Vector2.zero;
 
+    public GameObject player;
+
+    private Controller playerController;
+
     private string message = "";
 
     private CoAPServerChannel _coapServer = null;
+
+    private void Start()
+    {
+        playerController = player.GetComponent<Controller>();
+    }
 
     void OnGUI()
     {
@@ -110,7 +119,9 @@ public class CoAPServer : MonoBehaviour
             //Now do something with this temperature received from the server
     
             Debug.Log("the instruction received is:" + instruction);
-  
+
+            //playerController.MovePlayerByController();
+            player.GetComponent<Controller>().MovePlayerByController();
         }
 
     }

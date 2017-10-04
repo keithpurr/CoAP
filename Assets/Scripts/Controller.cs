@@ -155,4 +155,17 @@ public class Controller : MonoBehaviour
 		}
     }
 
+    public void MovePlayerByController(){
+
+        Debug.Log("moveplayerbycontroller is called");
+        
+		startTime = Time.time;
+		startPosition = transform.position;
+        targetPosition = startPosition + Vector3.left;
+
+		CarryBoxOrPutDown(Vector3.right);
+
+        Debug.Log("player moved");
+    }
+
 }
