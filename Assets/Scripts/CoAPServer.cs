@@ -8,6 +8,8 @@ using System;
 using EXILANT.Labs.CoAP.Helpers;
 using UnityEngine.UI;
 using UnityToolbag;
+using System.Net.NetworkInformation;
+using System.Linq;
 
 public class CoAPServer : MonoBehaviour
 {
@@ -46,6 +48,10 @@ public class CoAPServer : MonoBehaviour
         //_coapServer.CoAPError += CoAPErrorHandler;
 
         Debug.Log($"the hostname is {Dns.GetHostName()}");
+
+		// Find IP address
+		//var myIP = NetworkInterface.GetAllNetworkInterfaces().First(x => x.Name.Equals("en0")).GetIPProperties().UnicastAddre‌​sses.First(x => x.Addr‌​ess.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork).Address.ToString();
+
         message = "server started";
 
         //txtView.Text = "CoAP Server Started.";
@@ -56,7 +62,9 @@ public class CoAPServer : MonoBehaviour
     {
 
 
-        Debug.Log("Received Request::" + coapReq);
+        //Debug.Log("Received Request::" + coapReq);
+        //Debug.Log("Received Request:" + coapReq.MessageType);
+        Debug.Log("クリスピーはもらった！");
 
         message = coapReq.ToString();
 
