@@ -45,7 +45,8 @@ public class CoAPServer : MonoBehaviour
 
         //_coapServer.CoAPError += CoAPErrorHandler;
 
-        Debug.Log($"the hostname is{Dns.GetHostName()}");
+        Debug.Log($"the hostname is {Dns.GetHostName()}");
+        message = "server started";
 
         //txtView.Text = "CoAP Server Started.";
     }
