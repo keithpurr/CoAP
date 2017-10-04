@@ -123,7 +123,7 @@ public class CoAPServer : MonoBehaviour
 
 
 			//player.GetComponent<Controller>().MovePlayerByController();
-			Dispatcher.Invoke(() =>
+			Dispatcher.InvokeAsync(() =>
 			{
                 // this code is executed in main thread
                 playerController.MoveByController();
