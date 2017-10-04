@@ -21,6 +21,7 @@ public class Controller : MonoBehaviour
     //[SerializeField]
     //private Transform[] boxInContact =  new Transform[2];
     private Transform boxInContact;
+    private Vector3 moveTranslate;
 
 
 
@@ -155,15 +156,34 @@ public class Controller : MonoBehaviour
 		}
     }
 
-    public void MoveByController(){
+    public void MoveByController(string direction){
 
         Debug.Log("moveplayerbycontroller is called");
+
+        switch(direction){
+            case "left":
+                moveTranslate = Vector3.left;
+                break;
+            case "right":
+                moveTranslate = Vector3.right;
+                break;
+            case "up":
+                moveTranslate = Vector3.forward;
+                break;
+            case "down":
+                moveTranslate = Vector3.back;
+                break;
+            default:
+                moveTranslate = Vector3.zero;
+                break;
+
+        }
         
 		startTime = Time.time;
 		startPosition = transform.position;
-        targetPosition = startPosition + Vector3.left;
+        targetPosition = startPosition + moveTranslate;
 
-		CarryBoxOrPutDown(Vector3.right);
+        CarryBoxOrPutDown(moveTranslate);
 
         Debug.Log("player moved");
     }

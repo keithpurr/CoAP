@@ -88,7 +88,7 @@ public class CoAPServer : MonoBehaviour
                                                     //send response to client
             _coapServer.Send(unsupportedCType);
         }
-        else if (reqURIPath != "sensors/temp")
+        else if (reqURIPath != "player/moves")
         {
             //classic 404 not found..we do not understand this send a RST back 
             CoAPResponse unsupportedPath = new CoAPResponse(CoAPMessageType.RST, /*Message type*/
@@ -100,6 +100,7 @@ public class CoAPServer : MonoBehaviour
         }
         else
         {
+            // the direction one
 
             // Request contains instruction from controller
             // Check if request received contains “CONTENT”
@@ -111,22 +112,22 @@ public class CoAPServer : MonoBehaviour
 
             string instAsJSON = AbstractByteUtils.ByteToStringUTF8(coapReq.Payload.Value);
 
-			Debug.Log("received instruction:" + instAsJSON);
+			//Debug.Log("received instruction:" + instAsJSON);
             // hashable key/value pair
             Hashtable instructionValues = JSONResult.FromJSON(instAsJSON);
 
 
-            string instruction = instructionValues["instruction"].ToString();
+            string direction = instructionValues["instruction"].ToString();
             //Now do something with this temperature received from the server
     
-            Debug.Log("the instruction received is:" + instruction);
+            Debug.Log("the instruction received is:" + direction);
 
 
 			//player.GetComponent<Controller>().MovePlayerByController();
 			Dispatcher.InvokeAsync(() =>
 			{
                 // this code is executed in main thread
-                playerController.MoveByController();
+                playerController.MoveByController(direction);
 			});
         }
 
