@@ -120,8 +120,8 @@ public class CoAPServer : MonoBehaviour
     
             Debug.Log("the instruction received is:" + instruction);
 
-            //playerController.MovePlayerByController();
-            player.GetComponent<Controller>().MovePlayerByController();
+            playerController.MovePlayerByController();
+            //player.GetComponent<Controller>().MovePlayerByController();
         }
 
     }
