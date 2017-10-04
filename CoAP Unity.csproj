@@ -121,6 +121,7 @@
     <Compile Include="Assets\Scripts\CoAPServer_wellknow.cs" />
     <Compile Include="Assets\Scripts\Controller backup.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />
+    <Compile Include="Assets\Scripts\Dispatcher.cs" />
     <Compile Include="Assets\Scripts\StopMovement.cs" />
     <Compile Include="Assets\Scripts\Victory_Box.cs" />
     <Compile Include="Assets\Scripts\Victory_Player.cs" />

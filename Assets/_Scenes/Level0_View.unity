@@ -806,7 +806,8 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 19b6f60b482754ac1b6ade2971325b5f, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114089007537056862, guid: 7e5e91b7ae12346409de48aded8339e1, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 7e5e91b7ae12346409de48aded8339e1, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &307043929 stripped
@@ -1054,8 +1055,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 445005408}
-  - component: {fileID: 445005407}
   - component: {fileID: 445005406}
+  - component: {fileID: 445005407}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -1069,7 +1070,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 445005405}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e57fa5c82a0c3416bbd2eaf9bd43671a, type: 3}
   m_Name: 
@@ -1084,7 +1085,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 445005405}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6226284c0fbe54f87ae0edbe394db38f, type: 3}
+  m_Script: {fileID: 11500000, guid: f6e043c74394b4ef98ae387ef46a2fba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &445005408
@@ -3509,7 +3510,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 445005407}
+      - m_Target: {fileID: 0}
         m_MethodName: StartCoAPClient
         m_Mode: 1
         m_Arguments:

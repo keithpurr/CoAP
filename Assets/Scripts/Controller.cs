@@ -155,7 +155,7 @@ public class Controller : MonoBehaviour
 		}
     }
 
-    public void MovePlayerByController(){
+    public void MoveByController(){
 
         Debug.Log("moveplayerbycontroller is called");
         

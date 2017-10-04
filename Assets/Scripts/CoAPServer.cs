@@ -7,6 +7,7 @@ using System.Net;
 using System;
 using EXILANT.Labs.CoAP.Helpers;
 using UnityEngine.UI;
+using UnityToolbag;
 
 public class CoAPServer : MonoBehaviour
 {
@@ -120,8 +121,13 @@ public class CoAPServer : MonoBehaviour
     
             Debug.Log("the instruction received is:" + instruction);
 
-            playerController.MovePlayerByController();
-            //player.GetComponent<Controller>().MovePlayerByController();
+
+			//player.GetComponent<Controller>().MovePlayerByController();
+			Dispatcher.Invoke(() =>
+			{
+                // this code is executed in main thread
+                playerController.MoveByController();
+			});
         }
 
     }
