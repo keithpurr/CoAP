@@ -47,7 +47,8 @@ public class CoAPServer : MonoBehaviour
 
         //_coapServer.CoAPError += CoAPErrorHandler;
 
-        Debug.Log($"the hostname is {Dns.GetHostName()}");
+        //Debug.Log($"the hostname is {Dns.GetHostName()}");
+        Debug.Log("the hostname is: " + Dns.GetHostName());
 
 		// Find IP address
 		//var myIP = NetworkInterface.GetAllNetworkInterfaces().First(x => x.Name.Equals("en0")).GetIPProperties().UnicastAddre‌​sses.First(x => x.Addr‌​ess.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork).Address.ToString();
@@ -64,11 +65,11 @@ public class CoAPServer : MonoBehaviour
 
         //Debug.Log("Received Request::" + coapReq);
         //Debug.Log("Received Request:" + coapReq.MessageType);
-        Debug.Log("クリスピーはもらった！");
 
         message = coapReq.ToString();
 
-        Debug.Log($"uri path: {coapReq.GetPath()}");
+        //Debug.Log($"uri path: {coapReq.GetPath()}");
+        Debug.Log("uri path: " + coapReq.GetPath());
 
         string reqURIPath = (coapReq.GetPath() != null) ? coapReq.GetPath().ToLower() : "";
 

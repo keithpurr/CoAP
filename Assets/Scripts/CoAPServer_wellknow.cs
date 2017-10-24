@@ -35,7 +35,8 @@ public class CoAPServer1 : MonoBehaviour
 
         //_coapServer.CoAPError += CoAPErrorHandler;
 
-        Debug.Log($"the hostname is{Dns.GetHostName()}");
+        //Debug.Log($"the hostname is{Dns.GetHostName()}");
+        Debug.Log("the hostname is :" + Dns.GetHostName());
 
         //txtView.Text = "CoAP Server Started.";
     }
@@ -60,7 +61,8 @@ public class CoAPServer1 : MonoBehaviour
 
         message = coapReq.ToString();
 
-        Debug.Log($"uri path: {coapReq.GetPath()}");
+        //Debug.Log($"uri path: {coapReq.GetPath()}");
+        Debug.Log("uri path: " + coapReq.GetPath());
 
         string reqURIPath = (coapReq.GetPath() != null) ? coapReq.GetPath().ToLower() : "";
         /**
