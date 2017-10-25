@@ -121,12 +121,6 @@
     <Reference Include="CoAP">
       <HintPath>Assets/CoAP.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Common">
-      <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="CoAP Unity.Plugins.csproj">
@@ -146,6 +140,7 @@
     <Compile Include="Assets\Scripts\TrialServer.cs" />
     <Compile Include="Assets\Scripts\Victory_Box.cs" />
     <Compile Include="Assets\Scripts\Victory_Player.cs" />
+    <Compile Include="Assets\Scripts\ViewClient.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BouncyCastle.Crypto.xml" />
