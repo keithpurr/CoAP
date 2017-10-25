@@ -97,6 +97,30 @@
     <Reference Include="coapsharp">
       <HintPath>Assets/coapsharp.dll</HintPath>
     </Reference>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>Assets/BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Core">
+      <HintPath>Assets/Common.Logging.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
+      <HintPath>Assets/System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="COSE">
+      <HintPath>Assets/COSE.dll</HintPath>
+    </Reference>
+    <Reference Include="Numbers">
+      <HintPath>Assets/Numbers.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging">
+      <HintPath>Assets/Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="CBOR">
+      <HintPath>Assets/CBOR.dll</HintPath>
+    </Reference>
+    <Reference Include="CoAP">
+      <HintPath>Assets/CoAP.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
     </Reference>
@@ -117,11 +141,18 @@
     <Compile Include="Assets\Scripts\Controller backup.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />
     <Compile Include="Assets\Scripts\Dispatcher.cs" />
+    <Compile Include="Assets\Scripts\HelloWorldResource.cs" />
     <Compile Include="Assets\Scripts\StopMovement.cs" />
+    <Compile Include="Assets\Scripts\TrialServer.cs" />
     <Compile Include="Assets\Scripts\Victory_Box.cs" />
     <Compile Include="Assets\Scripts\Victory_Player.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\BouncyCastle.Crypto.xml" />
+    <None Include="Assets\CBOR.xml" />
+    <None Include="Assets\Common.Logging.Core.xml" />
+    <None Include="Assets\Common.Logging.xml" />
+    <None Include="Assets\Numbers.xml" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />

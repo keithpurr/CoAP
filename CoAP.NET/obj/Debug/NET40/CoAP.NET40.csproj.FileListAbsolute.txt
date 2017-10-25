@@ -1,0 +1,1 @@
+/Users/wilbur/WorkSpace/Github/CoAP-CSharp-orgin/CoAP-CSharp/CoAP.NET/obj/Debug/NET40/CoAP.NET40.csproj.CoreCompileInputs.cache

@@ -1,29 +1,12 @@
 ﻿<Properties StartupConfiguration="{5DB76A8F-3A75-C473-5291-6445C7946996}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CoAPClient.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/HelloWorldResource.cs">
     <Files>
-      <File FileName="../CoAPSharp_Test/CoAP_Client_iOS/ViewController.cs" Line="82" Column="1" />
-      <File FileName="Assets/Scripts/CoAPServer.cs" Line="14" Column="1" />
-      <File FileName="../CoAPSharp_Test/CoAP_Server/ViewController.cs" Line="215" Column="1" />
-      <File FileName="Assets/Scripts/Controller.cs" Line="167" Column="26" />
-      <File FileName="Assets/Standard Assets/Characters/FirstPersonCharacter/Scripts/FirstPersonController.cs" Line="13" Column="39" />
-      <File FileName="Assets/Scripts/CoAPServer_wellknow.cs" Line="64" Column="19" />
       <File FileName="Assets/Scripts/CoAPClient.cs" Line="20" Column="36" />
-      <File FileName="Assets/Scripts/StopMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Dispatcher.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Victory_Box.cs" Line="1" Column="1" />
+      <File FileName="CoAP.NET/DTLS/DTLSChannel.cs" Line="26" Column="21" />
+      <File FileName="../CoAP.NET.iOS/CoAP.NET.iOS/ModelServer.cs" Line="56" Column="1" />
+      <File FileName="Assets/Scripts/TrialServer.cs" Line="15" Column="9" />
+      <File FileName="Assets/Scripts/HelloWorldResource.cs" Line="1" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="CoAP Unity" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Prefabs" selected="True" />
-              <Node name="Scripts" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
@@ -32,4 +15,7 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.CoAP_220Unity PreferredExecutionTarget="Unity.Editor" />
   <MultiItemStartupConfigurations />
+  <DisabledProjects>
+    <String>../CoAP.NET.iOS/CoAP-CSharp/CoAP.NET/CoAP.NET45.csproj</String>
+  </DisabledProjects>
 </Properties>
