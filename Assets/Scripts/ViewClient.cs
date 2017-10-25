@@ -39,7 +39,7 @@ public class ViewClient: MonoBehaviour
         });
     }
 
-    void CancelNotification(){
+    public void CancelObservation(){
 
         // if the only way?
         Request request = new Request(Method.GET, true);
