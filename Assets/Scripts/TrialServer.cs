@@ -11,6 +11,9 @@ public class TrialServer : MonoBehaviour
     void Start()
     {
         server = new CoapServer();
+    }
+
+    public void StartServer(){
 
         server.Add(new HelloWorldResource("hello"));
         //server.Add(new FibonacciResource("fibonacci"));
@@ -28,18 +31,18 @@ public class TrialServer : MonoBehaviour
         {
             server.Start();
 
-            Console.Write("CoAP server [{0}] is listening on", server.Config.Version);
+            Debug.Log("CoAP server [{0}] is listening on" + server.Config.Version);
 
             foreach (var item in server.EndPoints)
             {
-                Console.Write(" ");
-                Console.Write(item.LocalEndPoint);
+                Debug.Log(" ");
+                Debug.Log(item.LocalEndPoint);
             }
-            Console.WriteLine();
+            Debug.Log("\n");
         }
         catch (Exception ex)
         {
-            Console.WriteLine(ex.Message);
+            Debug.Log(ex.Message);
         }
     }
 
