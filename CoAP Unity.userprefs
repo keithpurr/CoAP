@@ -1,11 +1,12 @@
 ﻿<Properties StartupConfiguration="{5DB76A8F-3A75-C473-5291-6445C7946996}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Controller.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../CoAP.NET.iOS/CoAP.NET.iOS.Controller/ControllerClient.cs">
     <Files>
       <File FileName="../CoAP.NET.iOS/CoAP.NET.iOS.Controller/ControllerClient.cs" Line="35" Column="13" />
-      <File FileName="Assets/Scripts/Dispatcher.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ViewClient.cs" Line="30" Column="36" />
+      <File FileName="Assets/Scripts/Dispatcher.cs" Line="28" Column="4" />
+      <File FileName="Assets/Scripts/ViewClient.cs" Line="38" Column="53" />
       <File FileName="Assets/Scripts/CoAPServer.cs" Line="10" Column="1" />
-      <File FileName="Assets/Scripts/Controller.cs" Line="159" Column="17" />
+      <File FileName="Assets/Scripts/Controller.cs" Line="159" Column="52" />
+      <File FileName="Assets/Scripts/StopMovement.cs" Line="7" Column="29" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

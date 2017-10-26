@@ -24,7 +24,7 @@ namespace UnityToolbag
 		/// <summary>
 		/// Gets a value indicating whether or not the current thread is the game's main thread.
 		/// </summary>
-		public static bool isMainThread
+		public static bool IsMainThread
 		{
 			get
 			{
@@ -44,7 +44,7 @@ namespace UnityToolbag
 				return;
 			}
 
-			if (isMainThread)
+			if (IsMainThread)
 			{
 				// Don't bother queuing work on the main thread; just execute it.
 				action();
