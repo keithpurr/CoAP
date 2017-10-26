@@ -19,23 +19,30 @@ public class ViewClient: MonoBehaviour
 	}
 
     public void StartClient(){
-        client.UseCONs();
-        //1. observe to 3 resources
-        client.Uri = new Uri("coap://californium.eclipse.org:5683/obs");
-        //what about error? How to use CON?
-        client.Observe(MediaType.ApplicationJson, Notify);
+       
+        //client.Uri = new Uri("coap://californium.eclipse.org:5683/");
+        client.Uri = new Uri("coap://Qis-iPhone:5683/");
 
+        //what about errorhandling? How to use CON?
+        client.UseCONs();
+
+    }
+
+    public void ObserveResources(){
+
+        client.UriPath = "/player_move";
+        client.Observe(MediaType.ApplicationJson, Notify);
     }
 
     void Notify(Response response){
         //Debug.Log(response);
-        move = Convert.ToBase64String(response.Payload);
-        Debug.Log(move);   
+        //move = Convert.ToBase64String(response.Payload);
+        Debug.Log("received payload: " + response.PayloadString);   
         Dispatcher.InvokeAsync(() =>
         {
             // this code is executed in main thread
             //playerController.MoveByController(move);
-            playerController.MoveByController("up");
+            playerController.MoveByController(move);
         });
     }
 
