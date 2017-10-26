@@ -94,26 +94,8 @@
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
     </Reference>
-    <Reference Include="coapsharp">
-      <HintPath>Assets/coapsharp.dll</HintPath>
-    </Reference>
     <Reference Include="BouncyCastle.Crypto">
       <HintPath>Assets/BouncyCastle.Crypto.dll</HintPath>
-    </Reference>
-    <Reference Include="Common.Logging.Core">
-      <HintPath>Assets/Common.Logging.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
-      <HintPath>Assets/System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
-    </Reference>
-    <Reference Include="COSE">
-      <HintPath>Assets/COSE.dll</HintPath>
-    </Reference>
-    <Reference Include="Numbers">
-      <HintPath>Assets/Numbers.dll</HintPath>
-    </Reference>
-    <Reference Include="Common.Logging">
-      <HintPath>Assets/Common.Logging.dll</HintPath>
     </Reference>
     <Reference Include="CBOR">
       <HintPath>Assets/CBOR.dll</HintPath>
@@ -121,11 +103,23 @@
     <Reference Include="CoAP">
       <HintPath>Assets/CoAP.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    <Reference Include="coapsharp">
+      <HintPath>Assets/coapsharp.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Common">
-      <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
+    <Reference Include="Common.Logging.Core">
+      <HintPath>Assets/Common.Logging.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging">
+      <HintPath>Assets/Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="COSE">
+      <HintPath>Assets/COSE.dll</HintPath>
+    </Reference>
+    <Reference Include="Numbers">
+      <HintPath>Assets/Numbers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
+      <HintPath>Assets/System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
