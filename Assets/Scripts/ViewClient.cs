@@ -42,6 +42,7 @@ public class ViewClient: MonoBehaviour
         {
             // this code is executed in main thread
             //playerController.MoveByController(move);
+            move = response.PayloadString;
             playerController.MoveByController(move);
         });
     }
