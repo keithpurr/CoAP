@@ -118,8 +118,53 @@
     <Reference Include="Numbers">
       <HintPath>Assets/Numbers.dll</HintPath>
     </Reference>
-    <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
-      <HintPath>Assets/System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    <Reference Include="System.Runtime.InteropServices">
+      <HintPath>Assets/System.Runtime.InteropServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>Assets/System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Extensions">
+      <HintPath>Assets/System.Runtime.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization">
+      <HintPath>Assets/System.Globalization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading">
+      <HintPath>Assets/System.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO">
+      <HintPath>Assets/System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection">
+      <HintPath>Assets/System.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections">
+      <HintPath>Assets/System.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Debug">
+      <HintPath>Assets/System.Diagnostics.Debug.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Extensions">
+      <HintPath>Assets/System.Reflection.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq">
+      <HintPath>Assets/System.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding">
+      <HintPath>Assets/System.Text.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq.Expressions">
+      <HintPath>Assets/System.Linq.Expressions.dll</HintPath>
+    </Reference>
+    <Reference Include="system.reflection.typeextensions">
+      <HintPath>Assets/system.reflection.typeextensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

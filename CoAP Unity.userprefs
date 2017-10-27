@@ -1,20 +1,28 @@
 ﻿<Properties StartupConfiguration="{5DB76A8F-3A75-C473-5291-6445C7946996}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ViewClient.cs">
     <Files>
-      <File FileName="../CoAP.NET.iOS/CoAP.NET.iOS.Controller/ControllerClient.cs" Line="35" Column="13" />
-      <File FileName="Assets/Scripts/Dispatcher.cs" Line="28" Column="4" />
-      <File FileName="Assets/Scripts/ViewClient.cs" Line="44" Column="43" />
+      <File FileName="Assets/Scripts/ViewClient.cs" Line="17" Column="25" />
       <File FileName="Assets/Scripts/Controller.cs" Line="159" Column="52" />
-      <File FileName="CoAP.NET/CoapClient.cs" Line="99" Column="23" />
-      <File FileName="Assets/Scripts/CoAPClient.cs" Line="20" Column="24" />
+      <File FileName="CoAP.NET/CoapClient.cs" Line="67" Column="33" />
+      <File FileName="Assets/Scripts/CoAPClient.cs" Line="45" Column="21" />
+      <File FileName="CoAP.NET/Properties/AssemblyInfo.cs" Line="9" Column="12" />
+      <File FileName="Assets/Scripts/CoAPServer.cs" Line="34" Column="24" />
+      <File FileName="CoAP.NET/Net/IEndPoint.cs" Line="20" Column="38" />
+      <File FileName="CoAP.NET/ICoapConfig.cs" Line="20" Column="37" />
+      <File FileName="CoAP.NET/Channel/UDPChannel.cs" Line="97" Column="26" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="CoAP Unity" expanded="True" selected="True">
+          <Node name="CoAP Unity" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="Scripts" expanded="True" />
-              <Node name="Standard Assets" expanded="True" />
+              <Node name="Scripts" expanded="True">
+                <Node name="ViewClient.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="CoAP.NET45" expanded="True">
+              <Node name="Channel" expanded="True" />
+              <Node name="Net" expanded="True" />
             </Node>
           </Node>
         </State>

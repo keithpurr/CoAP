@@ -57,6 +57,7 @@
 /Users/Keith/Projects/CoAP Unity/Assets/CoAP.dll.config
 /Users/Keith/Projects/CoAP Unity/Assets/CoAP.dll
 /Users/Keith/Projects/CoAP Unity/Assets/CoAP.pdb
+/Users/Keith/Projects/CoAP Unity/CoAP.NET/obj/Debug/NET45/CoAP.NET45.csprojResolveAssemblyReference.cache
 /Users/Keith/Projects/CoAP Unity/CoAP.NET/obj/Debug/NET45/CoAP.NET45.csproj.CoreCompileInputs.cache
 /Users/Keith/Projects/CoAP Unity/CoAP.NET/obj/Debug/NET45/CoAP.dll
 /Users/Keith/Projects/CoAP Unity/CoAP.NET/obj/Debug/NET45/CoAP.pdb

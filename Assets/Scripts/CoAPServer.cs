@@ -28,11 +28,11 @@ public class CoAPServer : MonoBehaviour
         playerController = player.GetComponent<Controller>();
     }
 
-    void OnGUI()
-    {
+    //void OnGUI()
+    //{
 
-        message = GUI.TextArea(new Rect(300, 50, 400, 400), message, 500);
-    }
+    //    message = GUI.TextArea(new Rect(300, 50, 400, 400), message, 500);
+    //}
 
 
     public void StartCoAPServer()

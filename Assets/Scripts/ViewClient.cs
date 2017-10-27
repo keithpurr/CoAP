@@ -31,7 +31,9 @@ public class ViewClient: MonoBehaviour
     public void ObserveResources(){
 
         client.UriPath = "/player_move";
-        client.Observe(MediaType.ApplicationJson, Notify);
+        //client.Observe(MediaType.ApplicationJson, Notify);
+        Response response =  client.Get();
+        Console.WriteLine(response);
     }
 
     void Notify(Response response){
