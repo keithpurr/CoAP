@@ -185,7 +185,7 @@ public class Controller : MonoBehaviour
 
         CarryBoxOrPutDown(moveTranslate);
 
-        Debug.Log("player moved");
+        Debug.Log("player moved"+ moveTranslate);
     }
 
 }
