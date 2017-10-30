@@ -20,8 +20,8 @@ public class ViewClient: MonoBehaviour
 
     public void StartClient(){
        
-        //client.Uri = new Uri("coap://californium.eclipse.org:5683/");
-        client.Uri = new Uri("coap://Qis-iPhone:5683/");
+        client.Uri = new Uri("coap://californium.eclipse.org:5683/");
+        //client.Uri = new Uri("coap://Qis-iPhone:5683/");
 
         //what about errorhandling? How to use CON?
         client.UseCONs();
@@ -30,10 +30,13 @@ public class ViewClient: MonoBehaviour
 
     public void ObserveResources(){
 
-        client.UriPath = "/player_move";
-        //client.Observe(MediaType.ApplicationJson, Notify);
-        Response response =  client.Get();
-        Console.WriteLine(response);
+        Debug.Log("observe button hit");
+
+        //client.UriPath = "/player_move";
+        client.UriPath = "/obs";
+        client.Observe(MediaType.ApplicationJson, Notify);
+        //Response response =  client.Get();
+        //Console.WriteLine(response);
     }
 
     void Notify(Response response){
