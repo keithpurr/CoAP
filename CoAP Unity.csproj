@@ -94,71 +94,26 @@
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
     </Reference>
-    <Reference Include="BouncyCastle.Crypto">
-      <HintPath>Assets/Plugins/iOS/BouncyCastle.Crypto.dll</HintPath>
-    </Reference>
-    <Reference Include="CBOR">
-      <HintPath>Assets/Plugins/iOS/CBOR.dll</HintPath>
-    </Reference>
-    <Reference Include="CoAP">
-      <HintPath>Assets/Plugins/iOS/CoAP.dll</HintPath>
-    </Reference>
-    <Reference Include="coapsharp">
-      <HintPath>Assets/Plugins/iOS/coapsharp.dll</HintPath>
+    <Reference Include="Numbers">
+      <HintPath>Assets/Numbers.dll</HintPath>
     </Reference>
     <Reference Include="Common.Logging">
-      <HintPath>Assets/Plugins/iOS/Common.Logging.dll</HintPath>
+      <HintPath>Assets/Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="CBOR">
+      <HintPath>Assets/CBOR.dll</HintPath>
     </Reference>
     <Reference Include="Common.Logging.Core">
-      <HintPath>Assets/Plugins/iOS/Common.Logging.Core.dll</HintPath>
+      <HintPath>Assets/Common.Logging.Core.dll</HintPath>
     </Reference>
     <Reference Include="COSE">
-      <HintPath>Assets/Plugins/iOS/COSE.dll</HintPath>
+      <HintPath>Assets/COSE.dll</HintPath>
     </Reference>
-    <Reference Include="System.Collections">
-      <HintPath>Assets/Plugins/iOS/System.Collections.dll</HintPath>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>Assets/BouncyCastle.Crypto.dll</HintPath>
     </Reference>
-    <Reference Include="System.Diagnostics.Debug">
-      <HintPath>Assets/Plugins/iOS/System.Diagnostics.Debug.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Globalization">
-      <HintPath>Assets/Plugins/iOS/System.Globalization.dll</HintPath>
-    </Reference>
-    <Reference Include="System.IO">
-      <HintPath>Assets/Plugins/iOS/System.IO.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Linq">
-      <HintPath>Assets/Plugins/iOS/System.Linq.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Linq.Expressions">
-      <HintPath>Assets/Plugins/iOS/System.Linq.Expressions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Reflection">
-      <HintPath>Assets/Plugins/iOS/System.Reflection.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Reflection.Extensions">
-      <HintPath>Assets/Plugins/iOS/System.Reflection.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="system.reflection.typeextensions">
-      <HintPath>Assets/Plugins/iOS/system.reflection.typeextensions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime">
-      <HintPath>Assets/Plugins/iOS/System.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.Extensions">
-      <HintPath>Assets/Plugins/iOS/System.Runtime.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.InteropServices">
-      <HintPath>Assets/Plugins/iOS/System.Runtime.InteropServices.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Text.Encoding">
-      <HintPath>Assets/Plugins/iOS/System.Text.Encoding.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Threading">
-      <HintPath>Assets/Plugins/iOS/System.Threading.dll</HintPath>
-    </Reference>
-    <Reference Include="Numbers">
-      <HintPath>Assets/Plugins/iOS/Numbers.dll</HintPath>
+    <Reference Include="CoAP">
+      <HintPath>Assets/CoAP.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -174,9 +129,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\CoAPClient.cs" />
-    <Compile Include="Assets\Scripts\CoAPServer.cs" />
-    <Compile Include="Assets\Scripts\CoAPServer_wellknow.cs" />
     <Compile Include="Assets\Scripts\Controller backup.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />
     <Compile Include="Assets\Scripts\Dispatcher.cs" />
@@ -188,11 +140,11 @@
     <Compile Include="Assets\Scripts\ViewClient.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Plugins\iOS\BouncyCastle.Crypto.xml" />
-    <None Include="Assets\Plugins\iOS\CBOR.xml" />
-    <None Include="Assets\Plugins\iOS\Common.Logging.Core.xml" />
-    <None Include="Assets\Plugins\iOS\Common.Logging.xml" />
-    <None Include="Assets\Plugins\iOS\Numbers.xml" />
+    <None Include="Assets\BouncyCastle.Crypto.xml" />
+    <None Include="Assets\CBOR.xml" />
+    <None Include="Assets\Common.Logging.Core.xml" />
+    <None Include="Assets\Common.Logging.xml" />
+    <None Include="Assets\Numbers.xml" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
