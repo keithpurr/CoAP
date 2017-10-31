@@ -16,11 +16,14 @@ public class ViewClient: MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
-        IPEndPoint localEp = new IPEndPoint(0, 0);
-        Debug.Log("\n\tAddress Family :" + localEp.AddressFamily);
+        IPEndPoint localEp = new IPEndPoint(IPAddress.Any, 0);
+        Debug.Log("\nAddress Family :" + localEp.AddressFamily);
+        Debug.Log("\nIPEndPoint information:" + localEp.ToString());
         CoAPEndPoint ep = new CoAPEndPoint(localEp);
+
         client = new CoapClient(){EndPoint=ep};
         ep.Start();
+        //client = new CoapClient();
         playerController = playerCube.GetComponent<Controller>();
 	}
 
