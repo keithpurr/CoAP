@@ -1,7 +1,9 @@
 using System;
+using System.Net;
 using UnityEngine;
 using Com.AugustCellars.CoAP;
 using UnityToolbag;
+using Com.AugustCellars.CoAP.Net;
 
 public class ViewClient: MonoBehaviour
 {
@@ -14,23 +16,32 @@ public class ViewClient: MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
-        client = new CoapClient();
+        IPEndPoint localEp = new IPEndPoint(0, 0);
+        Debug.Log("\n\tAddress Family :" + localEp.AddressFamily);
+        CoAPEndPoint ep = new CoAPEndPoint(localEp);
+        client = new CoapClient(){EndPoint=ep};
+        ep.Start();
         playerController = playerCube.GetComponent<Controller>();
 	}
 
-    public void StartClient(){
+    //public void StartClient(){
        
-        //client.Uri = new Uri("coap://californium.eclipse.org:5683/");
-        client.Uri = new Uri("coap://Qis-iPhone:5683/");
+    //    //client.Uri = new Uri("coap://californium.eclipse.org:5683/");
+    //    client.Uri = new Uri("coap://Qis-iPhone:5683/");
 
-        //what about errorhandling? How to use CON?
-        client.UseCONs();
+    //    //what about errorhandling? How to use CON?
+    //    client.UseCONs();
 
-    }
+    //}
 
     public void ObserveResources(){
 
         Debug.Log("observe button hit");
+
+        client.Uri = new Uri("coap://Qis-iPhone:5683/");
+
+        //what about errorhandling? How to use CON?
+        client.UseCONs();
 
         client.UriPath = "/player_move";
         //client.UriPath = "/obs";
