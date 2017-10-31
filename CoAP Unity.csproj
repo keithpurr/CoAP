@@ -94,128 +94,128 @@
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
     </Reference>
-    <Reference Include="BouncyCastle.Crypto">
-      <HintPath>Assets/BouncyCastle.Crypto.dll</HintPath>
+    <Reference Include="Common.Logging">
+      <HintPath>Assets/Plugins/Android/Common.Logging.dll</HintPath>
     </Reference>
     <Reference Include="CBOR">
-      <HintPath>Assets/CBOR.dll</HintPath>
-    </Reference>
-    <Reference Include="CoAP">
-      <HintPath>Assets/CoAP.dll</HintPath>
-    </Reference>
-    <Reference Include="Common.Logging.Core">
-      <HintPath>Assets/Common.Logging.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Common.Logging">
-      <HintPath>Assets/Common.Logging.dll</HintPath>
+      <HintPath>Assets/Plugins/Android/CBOR.dll</HintPath>
     </Reference>
     <Reference Include="COSE">
-      <HintPath>Assets/COSE.dll</HintPath>
+      <HintPath>Assets/Plugins/Android/COSE.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Win32.Primitives">
-      <HintPath>Assets/Microsoft.Win32.Primitives.dll</HintPath>
+    <Reference Include="Common.Logging.Core">
+      <HintPath>Assets/Plugins/Android/Common.Logging.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Numbers">
-      <HintPath>Assets/Numbers.dll</HintPath>
+    <Reference Include="CoAP">
+      <HintPath>Assets/Plugins/Android/CoAP.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>Assets/Plugins/Android/BouncyCastle.Crypto.dll</HintPath>
     </Reference>
     <Reference Include="System.AppContext">
-      <HintPath>Assets/System.AppContext.dll</HintPath>
+      <HintPath>Assets/Plugins/Android/System.AppContext.dll</HintPath>
     </Reference>
     <Reference Include="System.Collections">
-      <HintPath>Assets/System.Collections.dll</HintPath>
+      <HintPath>Assets/Plugins/Android/System.Collections.dll</HintPath>
     </Reference>
     <Reference Include="System.Console">
-      <HintPath>Assets/System.Console.dll</HintPath>
+      <HintPath>Assets/Plugins/Android/System.Console.dll</HintPath>
     </Reference>
     <Reference Include="System.Diagnostics.Debug">
-      <HintPath>Assets/System.Diagnostics.Debug.dll</HintPath>
+      <HintPath>Assets/Plugins/Android/System.Diagnostics.Debug.dll</HintPath>
     </Reference>
     <Reference Include="System.Diagnostics.DiagnosticSource">
-      <HintPath>Assets/System.Diagnostics.DiagnosticSource.dll</HintPath>
+      <HintPath>Assets/Plugins/Android/System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
     <Reference Include="System.Diagnostics.Tracing">
-      <HintPath>Assets/System.Diagnostics.Tracing.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Globalization.Calendars">
-      <HintPath>Assets/System.Globalization.Calendars.dll</HintPath>
+      <HintPath>Assets/Plugins/Android/System.Diagnostics.Tracing.dll</HintPath>
     </Reference>
     <Reference Include="System.Globalization">
-      <HintPath>Assets/System.Globalization.dll</HintPath>
+      <HintPath>Assets/Plugins/Android/System.Globalization.dll</HintPath>
     </Reference>
-    <Reference Include="System.IO.Compression">
-      <HintPath>Assets/System.IO.Compression.dll</HintPath>
-    </Reference>
-    <Reference Include="System.IO.Compression.ZipFile">
-      <HintPath>Assets/System.IO.Compression.ZipFile.dll</HintPath>
+    <Reference Include="System.Globalization.Calendars">
+      <HintPath>Assets/Plugins/Android/System.Globalization.Calendars.dll</HintPath>
     </Reference>
     <Reference Include="System.IO">
-      <HintPath>Assets/System.IO.dll</HintPath>
+      <HintPath>Assets/Plugins/Android/System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression">
+      <HintPath>Assets/Plugins/Android/System.IO.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.ZipFile">
+      <HintPath>Assets/Plugins/Android/System.IO.Compression.ZipFile.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.FileSystem">
-      <HintPath>Assets/System.IO.FileSystem.dll</HintPath>
+      <HintPath>Assets/Plugins/Android/System.IO.FileSystem.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.FileSystem.Primitives">
-      <HintPath>Assets/System.IO.FileSystem.Primitives.dll</HintPath>
+      <HintPath>Assets/Plugins/Android/System.IO.FileSystem.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="System.Linq">
-      <HintPath>Assets/System.Linq.dll</HintPath>
+      <HintPath>Assets/Plugins/Android/System.Linq.dll</HintPath>
     </Reference>
     <Reference Include="System.Linq.Expressions">
-      <HintPath>Assets/System.Linq.Expressions.dll</HintPath>
+      <HintPath>Assets/Plugins/Android/System.Linq.Expressions.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http">
-      <HintPath>Assets/System.Net.Http.dll</HintPath>
+      <HintPath>Assets/Plugins/Android/System.Net.Http.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Sockets">
-      <HintPath>Assets/System.Net.Sockets.dll</HintPath>
+      <HintPath>Assets/Plugins/Android/System.Net.Sockets.dll</HintPath>
     </Reference>
     <Reference Include="System.Reflection">
-      <HintPath>Assets/System.Reflection.dll</HintPath>
+      <HintPath>Assets/Plugins/Android/System.Reflection.dll</HintPath>
     </Reference>
     <Reference Include="System.Reflection.Extensions">
-      <HintPath>Assets/System.Reflection.Extensions.dll</HintPath>
+      <HintPath>Assets/Plugins/Android/System.Reflection.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Resources.ResourceManager">
-      <HintPath>Assets/System.Resources.ResourceManager.dll</HintPath>
+      <HintPath>Assets/Plugins/Android/System.Resources.ResourceManager.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime">
-      <HintPath>Assets/System.Runtime.dll</HintPath>
+      <HintPath>Assets/Plugins/Android/System.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Extensions">
-      <HintPath>Assets/System.Runtime.Extensions.dll</HintPath>
+      <HintPath>Assets/Plugins/Android/System.Runtime.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.InteropServices">
-      <HintPath>Assets/System.Runtime.InteropServices.dll</HintPath>
+      <HintPath>Assets/Plugins/Android/System.Runtime.InteropServices.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
-      <HintPath>Assets/System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <HintPath>Assets/Plugins/Android/System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
     </Reference>
     <Reference Include="System.Security.Cryptography.Algorithms">
-      <HintPath>Assets/System.Security.Cryptography.Algorithms.dll</HintPath>
+      <HintPath>Assets/Plugins/Android/System.Security.Cryptography.Algorithms.dll</HintPath>
     </Reference>
     <Reference Include="System.Security.Cryptography.Encoding">
-      <HintPath>Assets/System.Security.Cryptography.Encoding.dll</HintPath>
+      <HintPath>Assets/Plugins/Android/System.Security.Cryptography.Encoding.dll</HintPath>
     </Reference>
     <Reference Include="System.Security.Cryptography.Primitives">
-      <HintPath>Assets/System.Security.Cryptography.Primitives.dll</HintPath>
+      <HintPath>Assets/Plugins/Android/System.Security.Cryptography.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="System.Security.Cryptography.X509Certificates">
-      <HintPath>Assets/System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <HintPath>Assets/Plugins/Android/System.Security.Cryptography.X509Certificates.dll</HintPath>
     </Reference>
     <Reference Include="System.Text.Encoding">
-      <HintPath>Assets/System.Text.Encoding.dll</HintPath>
+      <HintPath>Assets/Plugins/Android/System.Text.Encoding.dll</HintPath>
     </Reference>
     <Reference Include="System.Text.RegularExpressions">
-      <HintPath>Assets/System.Text.RegularExpressions.dll</HintPath>
+      <HintPath>Assets/Plugins/Android/System.Text.RegularExpressions.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading">
-      <HintPath>Assets/System.Threading.dll</HintPath>
+      <HintPath>Assets/Plugins/Android/System.Threading.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks">
-      <HintPath>Assets/System.Threading.Tasks.dll</HintPath>
+      <HintPath>Assets/Plugins/Android/System.Threading.Tasks.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.ReaderWriter">
-      <HintPath>Assets/System.Xml.ReaderWriter.dll</HintPath>
+      <HintPath>Assets/Plugins/Android/System.Xml.ReaderWriter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives">
+      <HintPath>Assets/Plugins/Android/Microsoft.Win32.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Numbers">
+      <HintPath>Assets/Plugins/Android/Numbers.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -236,18 +236,18 @@
     <Compile Include="Assets\Scripts\ViewClient.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\BouncyCastle.Crypto.xml" />
-    <None Include="Assets\CBOR.xml" />
-    <None Include="Assets\Common.Logging.Core.xml" />
-    <None Include="Assets\Common.Logging.xml" />
-    <None Include="Assets\Numbers.xml" />
+    <None Include="Assets\Plugins\Android\BouncyCastle.Crypto.xml" />
+    <None Include="Assets\Plugins\Android\CBOR.xml" />
+    <None Include="Assets\Plugins\Android\Common.Logging.Core.xml" />
+    <None Include="Assets\Plugins\Android\Common.Logging.xml" />
+    <None Include="Assets\Plugins\Android\Numbers.xml" />
+    <None Include="Assets\Plugins\Android\System.Diagnostics.DiagnosticSource.xml" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
     <None Include="Assets\Standard Assets\Fonts\OpenSans\License!.txt" />
     <None Include="Assets\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
-    <None Include="Assets\System.Diagnostics.DiagnosticSource.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
