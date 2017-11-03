@@ -2,21 +2,8 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ViewClient.cs">
     <Files>
       <File FileName="Assets/Scripts/Controller.cs" Line="6" Column="2" />
-      <File FileName="Assets/Scripts/ViewClient.cs" Line="27" Column="40" />
+      <File FileName="Assets/Scripts/ViewClient.cs" Line="46" Column="9" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="CoAP Unity" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Scripts" expanded="True">
-                <Node name="ViewClient.cs" selected="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

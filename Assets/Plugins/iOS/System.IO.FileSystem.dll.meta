@@ -1,0 +1,40 @@
+fileFormatVersion: 2
+guid: aee16a13cc2214e0f85bc2531d06d375
+timeCreated: 1509490614
+licenseType: Free
+PluginImporter:
+  serializedVersion: 2
+  iconMap: {}
+  executionOrder: {}
+  isPreloaded: 0
+  isOverridable: 0
+  platformData:
+    data:
+      first:
+        Any: 
+      second:
+        enabled: 0
+        settings: {}
+    data:
+      first:
+        Editor: Editor
+      second:
+        enabled: 0
+        settings:
+          DefaultValueInitialized: true
+    data:
+      first:
+        Windows Store Apps: WindowsStoreApps
+      second:
+        enabled: 0
+        settings:
+          CPU: AnyCPU
+    data:
+      first:
+        iPhone: iOS
+      second:
+        enabled: 1
+        settings: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
