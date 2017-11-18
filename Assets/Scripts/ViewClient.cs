@@ -41,8 +41,9 @@ public class ViewClient: MonoBehaviour
 
         Debug.Log("observe button hit");
 
-        //client.Uri = new Uri("coap://192.168.0.19:5683");
-        client.Uri = new Uri("coap://Qis-iPhone:5683/");
+        client.Uri = new Uri("coap://192.168.0.19:5683");
+        // Can't resolve Qis-iPhone
+        //client.Uri = new Uri("coap://Qis-iPhone:5683/");
 
         //what about errorhandling? How to use CON?
         client.UseCONs();
