@@ -1,5 +1,6 @@
 using System;
 using System.Net;
+//using System.Drawing;
 using UnityEngine;
 using Com.AugustCellars.CoAP;
 using UnityToolbag;
@@ -10,8 +11,15 @@ public class ViewClient: MonoBehaviour
     public GameObject playerCube;
 
     private CoapClient client;
+
     private Controller playerController;
+    private Renderer playerRenderer;
+
     private string move;
+    private string color;
+    // defined in UnityEngine.Color
+    private Color updateColor = Color.white;
+    private string view;
 
 	// Use this for initialization
 	void Start()
@@ -23,8 +31,9 @@ public class ViewClient: MonoBehaviour
 
         client = new CoapClient(){EndPoint=ep};
         ep.Start();
-        //client = new CoapClient();
+
         playerController = playerCube.GetComponent<Controller>();
+        playerRenderer = playerCube.GetComponent<Renderer>();
 	}
 
     //public void StartClient(){
@@ -50,15 +59,17 @@ public class ViewClient: MonoBehaviour
         client.UseCONs();
 
         client.UriPath = "/player_move";
-        //client.UriPath = "/obs";
-        client.Observe(MediaType.ApplicationJson, Notify);
-        //Response response =  client.Get();
-        //Console.WriteLine(response);
+        client.Observe(MediaType.ApplicationJson, NotifyMove);
+
+        client.UriPath = "/player_color";
+        client.Observe(MediaType.ApplicationJson, NotifyColor);
+
+        //client.UriPath = "/camera_view";
+        //client.Observe(MediaType.ApplicationJson, NotifyView);
     }
 
-    void Notify(Response response){
-        //Debug.Log(response);
-        //move = Convert.ToBase64String(response.Payload);
+    void NotifyMove(Response response){
+
         Debug.Log("received payload: " + response.PayloadString);   
         Dispatcher.InvokeAsync(() =>
         {
@@ -69,8 +80,47 @@ public class ViewClient: MonoBehaviour
         });
     }
 
-    public void CancelObservation(){
+    void NotifyColor(Response response)
+    {
 
+        Debug.Log("received payload: " + response.PayloadString);
+        Dispatcher.InvokeAsync(() =>
+        {
+            // this code is executed in main thread
+            //playerController.MoveByController(move);
+            color = response.PayloadString;
+
+            switch (color){
+                case "Red":
+                    updateColor = Color.red;
+                    break;
+                case "Green":
+                    updateColor = Color.green;
+                    break;
+                case "Blue":
+                    updateColor = Color.blue;
+                    break;
+                case "Pink":
+                    updateColor = Color.pink;
+                    break;
+                case "Purple":
+                    updateColor = Color.purple;
+                    break;
+                case "White":
+                    updateColor = Color.white;
+                    break;
+                default:
+                    updateColor = Color.white;
+                    break;
+            }
+            playerRenderer.material.SetColor("_Color", updateColor);
+        });
+    }
+
+
+
+    public void CancelObservation(){
+           
         // if the only way?
         Request request = new Request(Method.GET, true);
         request.MarkObserveCancel();
