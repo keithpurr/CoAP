@@ -100,11 +100,11 @@ public class ViewClient: MonoBehaviour
                 case "Blue":
                     updateColor = Color.blue;
                     break;
-                case "Pink":
-                    updateColor = Color.pink;
+                case "Yellow":
+                    updateColor = Color.yellow;
                     break;
-                case "Purple":
-                    updateColor = Color.purple;
+                case "Grey":
+                    updateColor = Color.grey;
                     break;
                 case "White":
                     updateColor = Color.white;

@@ -1,13 +1,14 @@
 ﻿<Properties StartupConfiguration="{5DB76A8F-3A75-C473-5291-6445C7946996}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ViewClient.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../CoAP.NET.iOS/CoAP.NET.iOS.Controller/ControllerClient.cs">
     <Files>
       <File FileName="Assets/Scripts/Controller.cs" Line="6" Column="2" />
-      <File FileName="Assets/Scripts/ViewClient.cs" Line="94" Column="22" />
+      <File FileName="Assets/Scripts/ViewClient.cs" Line="104" Column="1" />
       <File FileName="CoAP-CSharp/CoAP.NET/CoapClient.cs" Line="670" Column="32" />
       <File FileName="CoAP-CSharp/CoAP.NET/Observe/ObserveManager.cs" Line="1" Column="1" />
       <File FileName="CoAP-CSharp/CoAP.NET/Observe/ObserveRelation.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Victory_Player.cs" Line="1" Column="1" />
-      <File FileName="../CoAP.NET.iOS/CoAP.NET.iOS.Controller/ViewController.cs" Line="31" Column="44" />
+      <File FileName="../CoAP.NET.iOS/CoAP.NET.iOS.Controller/ViewController.cs" Line="39" Column="58" />
+      <File FileName="../CoAP.NET.iOS/CoAP.NET.iOS.Controller/ControllerClient.cs" Line="30" Column="37" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
