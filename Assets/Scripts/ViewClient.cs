@@ -37,6 +37,7 @@ public class ViewClient: MonoBehaviour
 
     //}
 
+    // all 3 available resources including cam & cube color
     public void ObserveResources(){
 
         Debug.Log("observe button hit");
