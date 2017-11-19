@@ -54,21 +54,31 @@ public class ViewClient: MonoBehaviour
 
         Debug.Log("observe button hit");
 
-        client.Uri = new Uri("coap://192.168.0.19:5683");
-        // Can't resolve Qis-iPhone
-        //client.Uri = new Uri("coap://Qis-iPhone:5683/");
+        try
+        {
+            client.Uri = new Uri("coap://192.168.0.19:5683");
 
-        //what about errorhandling? How to use CON?
-        client.UseCONs();
 
-        client.UriPath = "/player_move";
-        client.Observe(MediaType.ApplicationJson, NotifyMove);
+            // Can't resolve Qis-iPhone
+            //client.Uri = new Uri("coap://Qis-iPhone:5683/");
 
-        client.UriPath = "/player_color";
-        client.Observe(MediaType.ApplicationJson, NotifyColor);
+            //what about errorhandling? How to use CON?
+            client.UseCONs();
 
-        client.UriPath = "/camera_view";
-        client.Observe(MediaType.ApplicationJson, NotifyView);
+            client.UriPath = "/player_move";
+            client.Observe(MediaType.ApplicationJson, NotifyMove);
+
+            client.UriPath = "/player_color";
+            client.Observe(MediaType.ApplicationJson, NotifyColor);
+
+            client.UriPath = "/camera_view";
+            client.Observe(MediaType.ApplicationJson, NotifyView);
+        }
+        catch (Exception e)
+        {
+            //Debug.Log("Please start a Model first.");
+            Debug.Log(e.Message);
+        }
     }
 
     void NotifyMove(Response response){
