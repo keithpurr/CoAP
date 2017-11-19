@@ -141,11 +141,11 @@ public class ViewClient: MonoBehaviour
             //playerController.MoveByController(move);
             view = response.PayloadString;
             if (view == "2d"){
-                mainCamera3d.enabled = false;
-                camera2d.enabled = true;
+                mainCamera3d.gameObject.SetActive(false);
+                camera2d.gameObject.SetActive(true);
             }else if(view == "3d"){
-                mainCamera3d.enabled = true;
-                camera2d.enabled = false;
+                mainCamera3d.gameObject.SetActive(true);
+                camera2d.gameObject.SetActive(false);
             }
                 
                 
