@@ -10,6 +10,9 @@ public class ViewClient: MonoBehaviour
 {
     public GameObject playerCube;
 
+    public Camera mainCamera3d;
+    public Camera camera2d;
+
     private CoapClient client;
 
     private Controller playerController;
@@ -64,8 +67,8 @@ public class ViewClient: MonoBehaviour
         client.UriPath = "/player_color";
         client.Observe(MediaType.ApplicationJson, NotifyColor);
 
-        //client.UriPath = "/camera_view";
-        //client.Observe(MediaType.ApplicationJson, NotifyView);
+        client.UriPath = "/camera_view";
+        client.Observe(MediaType.ApplicationJson, NotifyView);
     }
 
     void NotifyMove(Response response){
@@ -110,13 +113,34 @@ public class ViewClient: MonoBehaviour
                     updateColor = Color.white;
                     break;
                 default:
-                    updateColor = Color.white;
+                    updateColor = playerRenderer.material.GetColor("_Color");
                     break;
             }
             playerRenderer.material.SetColor("_Color", updateColor);
         });
     }
 
+
+    void NotifyView(Response response)
+    {
+
+        Debug.Log("received payload: " + response.PayloadString);
+        Dispatcher.InvokeAsync(() =>
+        {
+            // this code is executed in main thread
+            //playerController.MoveByController(move);
+            view = response.PayloadString;
+            if (view == "2d"){
+                mainCamera3d.enabled = false;
+                camera2d.enabled = true;
+            }else if(view == "3d"){
+                mainCamera3d.enabled = true;
+                camera2d.enabled = false;
+            }
+                
+                
+        });
+    }
 
 
     public void CancelObservation(){
