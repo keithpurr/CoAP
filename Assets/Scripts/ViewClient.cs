@@ -76,7 +76,8 @@ public class ViewClient: MonoBehaviour
         }
         catch (Exception e)
         {
-            //Debug.Log("Please start a Model first.");
+            // Not working still freezes.
+            // Debug.Log("Please start a Model first.");
             Debug.Log(e.Message);
         }
     }
