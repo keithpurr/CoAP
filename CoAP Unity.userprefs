@@ -2,7 +2,7 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ViewClient.cs">
     <Files>
       <File FileName="Assets/Scripts/Controller.cs" Line="6" Column="2" />
-      <File FileName="Assets/Scripts/ViewClient.cs" Line="71" Column="46" />
+      <File FileName="Assets/Scripts/ViewClient.cs" Line="58" Column="10" />
       <File FileName="CoAP-CSharp/CoAP.NET/CoapClient.cs" Line="670" Column="32" />
       <File FileName="CoAP-CSharp/CoAP.NET/Observe/ObserveManager.cs" Line="1" Column="1" />
       <File FileName="CoAP-CSharp/CoAP.NET/Observe/ObserveRelation.cs" Line="1" Column="1" />
