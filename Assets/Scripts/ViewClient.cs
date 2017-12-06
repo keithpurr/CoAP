@@ -5,6 +5,10 @@ using UnityEngine;
 using Com.AugustCellars.CoAP;
 using UnityToolbag;
 using Com.AugustCellars.CoAP.Net;
+using System.Diagnostics;
+//using System.Threading.Tasks;
+using System.Threading;
+using System.Threading.Tasks;
 
 public class ViewClient: MonoBehaviour
 {
@@ -28,8 +32,8 @@ public class ViewClient: MonoBehaviour
 	void Start()
 	{
         IPEndPoint localEp = new IPEndPoint(IPAddress.Any, 0);
-        Debug.Log("\nAddress Family :" + localEp.AddressFamily);
-        Debug.Log("\nIPEndPoint information:" + localEp.ToString());
+        UnityEngine.Debug.Log("\nAddress Family :" + localEp.AddressFamily);
+        UnityEngine.Debug.Log("\nIPEndPoint information:" + localEp.ToString());
         CoAPEndPoint ep = new CoAPEndPoint(localEp);
 
         client = new CoapClient(){EndPoint=ep};
@@ -52,7 +56,7 @@ public class ViewClient: MonoBehaviour
     // all 3 available resources including cam & cube color
     public void ObserveResources(){
 
-        Debug.Log("observe button hit");
+        UnityEngine.Debug.Log("observe button hit");
 
         try
         {
@@ -81,7 +85,7 @@ public class ViewClient: MonoBehaviour
         {
             // Not working still freezes.
             // Debug.Log("Please start a Model first.");
-            Debug.Log(e.Message);
+            UnityEngine.Debug.Log(e.Message);
         }
     }
 
@@ -92,20 +96,35 @@ public class ViewClient: MonoBehaviour
 
     void NotifyMove(Response response){
 
-        Debug.Log("received payload: " + response.PayloadString);   
-        Dispatcher.InvokeAsync(() =>
-        {
-            // this code is executed in main thread
-            //playerController.MoveByController(move);
-            move = response.PayloadString;
-            playerController.MoveByController(move);
-        });
+        UnityEngine.Debug.Log("received payload: " + response.PayloadString);
+        UnityEngine.Debug.Log("obs response on thread: " + Thread.CurrentThread.ManagedThreadId);
+        //Dispatcher.InvokeAsync(() =>
+        //{
+        //    // this code is executed in main thread
+        //    //playerController.MoveByController(move);
+        //    move = response.PayloadString;
+        //    playerController.MoveByController(move);
+        //});
+        //var t = new Task(() => {
+        //    Console.WriteLine("Task {0} running on thread {1}",
+        //                   Task.CurrentId, Thread.CurrentThread.ManagedThreadId);
+        //    for (int ctr = 1; ctr <= 10; ctr++)
+        //        Console.WriteLine("   Iteration {0}", ctr);
+        //}
+                       //);
+        //t.Start();
+
+        //Task task = new Task(() => { playerController.MoveByController(response.PayloadString); });
+        Task t = Task.Run(() => UnityEngine.Debug.Log("a"));
+        //task.Start();
+        //task.Start(TaskScheduler.FromCurrentSynchronizationContext());
+
     }
 
     void NotifyColor(Response response)
     {
 
-        Debug.Log("received payload: " + response.PayloadString);
+        UnityEngine.Debug.Log("received payload: " + response.PayloadString);
         Dispatcher.InvokeAsync(() =>
         {
             // this code is executed in main thread
@@ -143,7 +162,7 @@ public class ViewClient: MonoBehaviour
     void NotifyView(Response response)
     {
 
-        Debug.Log("received payload: " + response.PayloadString);
+        UnityEngine.Debug.Log("received payload: " + response.PayloadString);
         Dispatcher.InvokeAsync(() =>
         {
             // this code is executed in main thread

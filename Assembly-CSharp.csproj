@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{67E45882-F186-3992-1BF7-25C026681B9C}</ProjectGuid>
+    <ProjectGuid>{4671F983-DBF3-3B36-8B95-6B0AC8957694}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_1_1;UNITY_2017_1;UNITY_2017;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;ENABLE_RUNTIME_GI;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_NETWORK;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_IOS_NATIVE_CRASH_REPORTING;PLAYERCONNECTION_LISTENS_FIXED_PORT;DEBUGGER_LISTENS_FIXED_PORT;PLATFORM_SUPPORTS_ADS_ID;SUPPORT_ENVIRONMENT_VARIABLES;PLATFORM_SUPPORTS_PROFILER;PLATFORM_HAS_NO_SUPPORT_FOR_BUCKET_ALLOCATOR;STRICTCPP_NEW_DELETE_SIGNATURES;HAS_NEON_SKINNIG;UNITY_GFX_USE_PLATFORM_VSYNC;UNITY_INPUT_SIMULATE_EVENTS;PLATFORM_ALWAYS_USES_STDOUT_FOR_LOG;ENABLE_VR;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;PLATFORM_IOS;UNITY_IOS;PLATFORM_IPHONE;UNITY_IPHONE;UNITY_IPHONE_API;SUPPORT_MULTIPLE_DISPLAYS;ENABLE_IL2CPP;NET_4_6;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_IOS_ON_DEMAND_RESOURCES;ENABLE_IOS_APP_SLICING;UNITY_HAS_GOOGLEVR;ENABLE_MONO</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_1_1;UNITY_2017_1;UNITY_2017;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;PLATFORM_ANDROID;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_SUBSTANCE;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_VR;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_4_6;DEVELOPMENT_BUILD;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU;CROSS_PLATFORM_INPUT;MOBILE_INPUT;UNITY_HAS_GOOGLEVR</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -51,7 +51,32 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Test.cs" />
+     <Compile Include="Assets\Scripts\Controller backup.cs" />
+     <Compile Include="Assets\Scripts\Controller.cs" />
+     <Compile Include="Assets\Scripts\Dispatcher.cs" />
+     <Compile Include="Assets\Scripts\HelloWorldResource.cs" />
+     <Compile Include="Assets\Scripts\StopMovement.cs" />
+     <Compile Include="Assets\Scripts\TrialServer.cs" />
+     <Compile Include="Assets\Scripts\Victory_Box.cs" />
+     <Compile Include="Assets\Scripts\Victory_Player.cs" />
+     <Compile Include="Assets\Scripts\ViewClient.cs" />
+     <None Include="Assets\Plugins\iOS\BouncyCastle.Crypto.xml" />
+     <None Include="Assets\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
+     <None Include="Assets\Plugins\Android\Numbers.xml" />
+     <None Include="Assets\Plugins\iOS\Common.Logging.Core.xml" />
+     <None Include="Assets\Plugins\Android\Common.Logging.xml" />
+     <None Include="Assets\Plugins\iOS\CBOR.xml" />
+     <None Include="Assets\Standard Assets\Fonts\OpenSans\License!.txt" />
+     <None Include="Assets\Plugins\Android\System.Diagnostics.DiagnosticSource.xml" />
+     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+     <None Include="Assets\Plugins\iOS\System.Diagnostics.DiagnosticSource.xml" />
+     <None Include="Assets\Plugins\iOS\Numbers.xml" />
+     <None Include="Assets\Plugins\Android\CBOR.xml" />
+     <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
+     <None Include="Assets\Plugins\Android\Common.Logging.Core.xml" />
+     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
+     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
+     <None Include="Assets\Plugins\Android\BouncyCastle.Crypto.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -73,6 +98,136 @@
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
  </Reference>
+ <Reference Include="System.Drawing">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/System.Drawing.dll</HintPath>
+ </Reference>
+ <Reference Include="CBOR">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/CBOR.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/System.IO.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Reflection">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/System.Reflection.dll</HintPath>
+ </Reference>
+ <Reference Include="COSE">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/COSE.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Diagnostics.DiagnosticSource">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/System.Diagnostics.DiagnosticSource.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Threading">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/System.Threading.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Console">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/System.Console.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.Sockets">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/System.Net.Sockets.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.Http">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/System.Net.Http.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Security.Cryptography.X509Certificates">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/System.Security.Cryptography.X509Certificates.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Linq.Expressions">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/System.Linq.Expressions.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.InteropServices">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/System.Runtime.InteropServices.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Text.RegularExpressions">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/System.Text.RegularExpressions.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.Compression">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/System.IO.Compression.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+ </Reference>
+ <Reference Include="CoAP">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/CoAP.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.FileSystem.Primitives">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/System.IO.FileSystem.Primitives.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Security.Cryptography.Primitives">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/System.Security.Cryptography.Primitives.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.Compression.ZipFile">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/System.IO.Compression.ZipFile.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Resources.ResourceManager">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/System.Resources.ResourceManager.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Collections">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/System.Collections.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml.ReaderWriter">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/System.Xml.ReaderWriter.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Threading.Tasks">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/System.Threading.Tasks.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Diagnostics.Tracing">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/System.Diagnostics.Tracing.dll</HintPath>
+ </Reference>
+ <Reference Include="System.AppContext">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/System.AppContext.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Text.Encoding">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/System.Text.Encoding.dll</HintPath>
+ </Reference>
+ <Reference Include="Numbers">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/Numbers.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Globalization">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/System.Globalization.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/System.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Reflection.Extensions">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/System.Reflection.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.Extensions">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/System.Runtime.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Security.Cryptography.Encoding">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/System.Security.Cryptography.Encoding.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Globalization.Calendars">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/System.Globalization.Calendars.dll</HintPath>
+ </Reference>
+ <Reference Include="BouncyCastle.Crypto">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/BouncyCastle.Crypto.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.FileSystem">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/System.IO.FileSystem.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Security.Cryptography.Algorithms">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/System.Security.Cryptography.Algorithms.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Linq">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/System.Linq.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Diagnostics.Debug">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/System.Diagnostics.Debug.dll</HintPath>
+ </Reference>
+ <Reference Include="Microsoft.Win32.Primitives">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/Microsoft.Win32.Primitives.dll</HintPath>
+ </Reference>
+ <Reference Include="Common.Logging.Core">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/Common.Logging.Core.dll</HintPath>
+ </Reference>
+ <Reference Include="Common.Logging">
+ <HintPath>/Users/Keith/Projects/CoAP Unity/Assets/Plugins/Android/Common.Logging.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{7BFF7B2D-815F-2777-ECB9-4573C64E11C3}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
