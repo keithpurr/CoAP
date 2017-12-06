@@ -66,13 +66,16 @@ public class ViewClient: MonoBehaviour
             client.UseCONs();
 
             client.UriPath = "/player_move";
-            client.Observe(MediaType.ApplicationJson, NotifyMove);
+            //client.Observe(MediaType.ApplicationJson, NotifyMove);
+            client.ObserveAsync(NotifyMove,FailHandler);
 
             client.UriPath = "/player_color";
-            client.Observe(MediaType.ApplicationJson, NotifyColor);
+            //client.Observe(MediaType.ApplicationJson, NotifyColor);
+            client.ObserveAsync(NotifyColor, FailHandler);
 
             client.UriPath = "/camera_view";
-            client.Observe(MediaType.ApplicationJson, NotifyView);
+            //client.Observe(MediaType.ApplicationJson, NotifyView);
+            client.ObserveAsync(NotifyView, FailHandler);
         }
         catch (Exception e)
         {
@@ -80,6 +83,11 @@ public class ViewClient: MonoBehaviour
             // Debug.Log("Please start a Model first.");
             Debug.Log(e.Message);
         }
+    }
+
+    private void FailHandler(CoapClient.FailReason fail)
+    {
+        Console.WriteLine("request failed: " + fail.ToString());
     }
 
     void NotifyMove(Response response){
